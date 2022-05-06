@@ -1,3 +1,4 @@
+
 /**
  * Min Max Normalization is a normalization technique that normalizes the data
  * to have a new minimum value and a new maximum value and scales data linearly

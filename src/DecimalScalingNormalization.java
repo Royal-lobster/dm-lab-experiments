@@ -1,3 +1,4 @@
+
 /**
  * Decimal Scaling Normalization is a normalization technique that takes in data
  * and j and returns a normalized data by shifting the decimal point to the left
