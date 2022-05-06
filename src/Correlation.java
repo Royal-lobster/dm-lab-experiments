@@ -27,30 +27,21 @@ public class Correlation {
         if (X.length != Y.length) {
             throw new IllegalArgumentException("X and Y must be the same length");
         }
+        int N = X.length;
+        double ΣX = 0, ΣY = 0, ΣXY = 0;
+        double ΣXˆ2 = 0, ΣYˆ2 = 0;
 
-        int n = X.length;
-        double sum_X = 0, sum_Y = 0, sum_XY = 0;
-        double squareSum_X = 0, squareSum_Y = 0;
-
-        for (int i = 0; i < n; i++) {
-            // sum of elements of array X.
-            sum_X = sum_X + X[i];
-
-            // sum of elements of array Y.
-            sum_Y = sum_Y + Y[i];
-
-            // sum of X[i] * Y[i].
-            sum_XY = sum_XY + X[i] * Y[i];
-
-            // sum of square of array elements.
-            squareSum_X = squareSum_X + Math.pow(X[i], 2);
-            squareSum_Y = squareSum_Y + Math.pow(Y[i], 2);
+        for (int i = 0; i < N; i++) {
+            ΣX += X[i];
+            ΣY += Y[i];
+            ΣXY += X[i] * Y[i];
+            ΣXˆ2 += X[i] * X[i];
+            ΣYˆ2 += Y[i] * Y[i];
         }
 
         // use formula for calculating correlation coefficient.
-        double corr = (double) (n * sum_XY - sum_X * sum_Y) /
-                (double) (Math.sqrt((n * squareSum_X - Math.pow(sum_X, 2)) * (n * squareSum_Y - Math.pow(sum_Y, 2))));
+        return (N * ΣXY - ΣX * ΣY)
+                / (Math.sqrt((N * ΣXˆ2 - ΣX * ΣX) * (N * ΣYˆ2 - ΣY * ΣY)));
 
-        return corr;
     }
 }
