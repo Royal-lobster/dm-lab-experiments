@@ -12,8 +12,8 @@ train_data$Loan_Status <-
 
 # Train model
 model <- glm(train_data$Loan_Status ~ .,
-    family = binomial(link = "logit"),
-    data = train_data, maxit = 100
+    family = binomial,
+    data = train_data,
 )
 print(summary(model))
 
