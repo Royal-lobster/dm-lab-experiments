@@ -1,3 +1,12 @@
+/**
+ * ZScore Normalization is a normalization technique that normalizes the data to
+ * have a mean of 0 and a standard deviation of 1.
+ *
+ * @author Srujan Gurram
+ * @version 1.0
+ * @license MIT
+ */
+
 public class ZScoreNormalize {
     public static void main(String[] args) {
         ZScoreNormalize z = new ZScoreNormalize();

@@ -1,3 +1,12 @@
+/**
+ * Min Max Normalization is a normalization technique that normalizes the data
+ * to have a new minimum value and a new maximum value and scales data linearly
+ *
+ * @author Srujan Gurram
+ * @version 1.0
+ * @license MIT
+ */
+
 public class MinMaxNormalize {
     public static void main(String[] args) {
         MinMaxNormalize m = new MinMaxNormalize();
