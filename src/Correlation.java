@@ -1,5 +1,15 @@
-public class Correlation {
 
+/**
+ * Correlation is a measure of the extent to which two variables are related.
+ * 1 is a perfect positive correlation, -1 is a perfect negative correlation,
+ * and 0 is no correlation between the two set of variables.
+ *
+ * @author Srujan Gurram
+ * @version 1.0
+ * @license MIT
+ */
+
+public class Correlation {
     public static void main(String[] args) {
         Correlation c = new Correlation();
         double[] data1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
