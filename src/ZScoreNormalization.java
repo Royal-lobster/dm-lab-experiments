@@ -7,9 +7,9 @@
  * @license MIT
  */
 
-public class ZScoreNormalize {
+public class ZScoreNormalization {
     public static void main(String[] args) {
-        ZScoreNormalize z = new ZScoreNormalize();
+        ZScoreNormalization z = new ZScoreNormalization();
         double[] data = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         double[] normalizedData = z.Normalize(data);
         for (double d : normalizedData) {

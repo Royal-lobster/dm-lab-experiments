@@ -7,9 +7,9 @@
  * @license MIT
  */
 
-public class MinMaxNormalize {
+public class MinMaxNormalization {
     public static void main(String[] args) {
-        MinMaxNormalize m = new MinMaxNormalize();
+        MinMaxNormalization m = new MinMaxNormalization();
         double[] data = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         double[] normalizedData = m.Normalize(data, 0, 1);
         for (double d : normalizedData) {
