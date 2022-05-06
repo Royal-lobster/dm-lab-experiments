@@ -24,6 +24,7 @@ public class Correlation {
         if (X.length != Y.length) {
             throw new IllegalArgumentException("X and Y must be the same length");
         }
+
         int n = X.length;
         double sum_X = 0, sum_Y = 0, sum_XY = 0;
         double squareSum_X = 0, squareSum_Y = 0;
