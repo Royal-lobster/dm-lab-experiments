@@ -25,7 +25,7 @@ test_data[test_data == ""] <- NA
 na.omit(test_data)
 
 # Predict Loan_Status
-results <- predict(model, newdata = test_data, type = "response")
+results <- predict(model, test_data)
 results <- ifelse(results >= 0.5, "Y", "N")
 predicted_data <- data.frame(Loan_ID = test_data$Loan_ID, Loan_Status = results)
 
