@@ -2,7 +2,7 @@
 data <- read.csv("datasets/students.csv")
 
 # DELETE UNNECESSARY COLUMNS
-data <- data[2:9]
+data <- subset(data, select = -c(id))
 
 # CREATE NEW COLUMN AND CALCULATE BMI
 data$BMI <- data$weight / (data$height / 100)^2

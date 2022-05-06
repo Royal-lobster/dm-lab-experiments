@@ -2,7 +2,7 @@
 data <- read.csv("datasets/labor.csv")
 
 # DELETE UNNECESSARY COLUMNS
-data <- data[2:6]
+data <- subset(data, select = -c(height))
 
 # REPLACE MISSING AGE WITH AVERAGE AGE
 data$Age[is.na(data$Age)] <- as.integer(mean(data$Age, na.rm = T))
