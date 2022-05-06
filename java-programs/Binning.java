@@ -14,7 +14,7 @@ public class Binning {
 
     public static void main(String[] args) {
         Binning b = new Binning();
-        double[] data = { 5, 10, 11, 13, 15, 35, 50, 55, 72, 92, 204, 215, 256 };
+        double[] data = { 5, 10, 11, 13, 15, 35, 50, 55, 72, 92, 204, 215, 216 };
 
         double[] binnedDataByMean = b.BinData(data, 3, BinningType.Mean);
         System.out.println("Binned data by mean:");
@@ -51,7 +51,8 @@ public class Binning {
 
             // replace values in current bin
             for (int j = 0; j < binSize; j++) {
-                smoothenedData[i + j] += replacement;
+                if (i + j < numArray.length)
+                    smoothenedData[i + j] += replacement;
             }
         }
         return smoothenedData;
