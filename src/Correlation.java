@@ -43,13 +43,13 @@ public class Correlation {
             sum_XY = sum_XY + X[i] * Y[i];
 
             // sum of square of array elements.
-            squareSum_X = squareSum_X + X[i] * X[i];
-            squareSum_Y = squareSum_Y + Y[i] * Y[i];
+            squareSum_X = squareSum_X + Math.pow(X[i], 2);
+            squareSum_Y = squareSum_Y + Math.pow(Y[i], 2);
         }
 
         // use formula for calculating correlation coefficient.
         double corr = (double) (n * sum_XY - sum_X * sum_Y) /
-                (double) (Math.sqrt((n * squareSum_X - sum_X * sum_X) * (n * squareSum_Y - sum_Y * sum_Y)));
+                (double) (Math.sqrt((n * squareSum_X - Math.pow(sum_X, 2)) * (n * squareSum_Y - Math.pow(sum_Y, 2))));
 
         return corr;
     }
