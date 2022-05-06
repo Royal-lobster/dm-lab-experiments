@@ -3,6 +3,9 @@
  * Correlation is a measure of the extent to which two variables are related.
  * 1 is a perfect positive correlation, -1 is a perfect negative correlation,
  * and 0 is no correlation between the two set of variables.
+ * 
+ * If the two data attributes are strongly correlated, then one of the data
+ * attributes can be removed from the analysis.
  *
  * @author Srujan Gurram
  * @version 1.0
