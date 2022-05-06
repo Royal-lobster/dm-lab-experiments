@@ -23,10 +23,9 @@ public class Correlation {
     }
 
     private double correlationCoefficient(double X[], double Y[]) {
-
-        if (X.length != Y.length) {
+        if (X.length != Y.length)
             throw new IllegalArgumentException("X and Y must be the same length");
-        }
+
         int N = X.length;
         double ΣX = 0, ΣY = 0, ΣXY = 0;
         double ΣXˆ2 = 0, ΣYˆ2 = 0;
@@ -39,9 +38,7 @@ public class Correlation {
             ΣYˆ2 += Y[i] * Y[i];
         }
 
-        // use formula for calculating correlation coefficient.
         return (N * ΣXY - ΣX * ΣY)
                 / (Math.sqrt((N * ΣXˆ2 - ΣX * ΣX) * (N * ΣYˆ2 - ΣY * ΣY)));
-
     }
 }
