@@ -1,3 +1,13 @@
+
+/**
+ * Binning is a preprocessing method in data mining that smoothens the data by
+ * grouping similar values into bins 
+ *
+ * @author Srujan Gurram
+ * @version 1.0
+ * @license MIT
+ */
+
 import java.util.Arrays;
 
 public class Binning {
