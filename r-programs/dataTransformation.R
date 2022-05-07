@@ -7,8 +7,6 @@ data <- subset(data, select = -c(id))
 # CREATE NEW COLUMN AND CALCULATE BMI
 data$BMI <- data$weight / (data$height / 100)^2
 
-# PERFORM BINNING BY MEAN FOR BMI
-
 # REMOVE HEIGHT from data
 data <- subset(data, select = -c(height))
 
