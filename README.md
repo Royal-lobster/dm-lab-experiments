@@ -2,7 +2,7 @@
 
 ## Contents
 
-###Java Programs
+### Java Programs
 1. Min Max Normalization
 2. Z-Score Normalization
 3. Corelation
